@@ -20,6 +20,8 @@ body {
     justify-content: center;
     text-align: center;
     color: white;
+    position: relative;
+    overflow: hidden;
 }
 
 .hero-content {
@@ -152,4 +154,14 @@ footer {
         flex-direction: column;
         align-items: center;
     }
+}
+.hero::after {
+    content: "";
+    position: absolute;
+    width: 500px;
+    height: 500px;
+    background: radial-gradient(circle, rgba(120,180,255,0.4), transparent 70%);
+    top: -100px;
+    right: -100px;
+    filter: blur(80px);
 }
