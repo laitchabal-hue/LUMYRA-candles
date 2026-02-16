@@ -1,30 +1,30 @@
+/* RESET */
 * {
     margin: 0;
     padding: 0;
     box-sizing: border-box;
 }
 
+/* BODY */
 body {
     font-family: 'Poppins', sans-serif;
-    color: white;
 }
 
 /* NAVBAR */
 .navbar {
     position: absolute;
-    top: 0;
     width: 100%;
     padding: 25px 60px;
     display: flex;
     justify-content: space-between;
     align-items: center;
-    z-index: 3;
+    z-index: 10;
 }
 
 .logo {
-    font-family: 'Playfair Display', serif;
-    font-size: 28px;
-    letter-spacing: 2px;
+    color: white;
+    font-size: 22px;
+    letter-spacing: 3px;
 }
 
 .nav-links {
@@ -38,61 +38,55 @@ body {
     color: white;
     font-size: 14px;
     letter-spacing: 1px;
-    transition: 0.3s;
 }
 
-.nav-links a:hover {
-    opacity: 0.7;
-}
-
-/* HERO */
+/* HERO IMAGE SECTION */
 .hero {
-    position: relative;
     height: 100vh;
-    background: url("hero.png") no-repeat center center/cover;
+    background: url("hero.png") center/cover no-repeat;
     display: flex;
     align-items: center;
-    padding-left: 80px;
+    padding-left: 100px;
+    position: relative;
 }
 
 /* Dark overlay */
-.overlay {
+.hero::before {
+    content: "";
     position: absolute;
-    width: 100%;
-    height: 100%;
-    background: rgba(0, 0, 0, 0.5);
+    inset: 0;
+    background: rgba(0,0,0,0.45);
 }
 
-/* Hero content */
 .hero-content {
     position: relative;
-    z-index: 2;
+    color: white;
     max-width: 600px;
 }
 
 .hero-content h1 {
     font-family: 'Playfair Display', serif;
     font-size: 55px;
-    font-weight: 500;
+    margin-bottom: 20px;
 }
 
 .hero-content p {
-    margin-top: 20px;
-    font-size: 16px;
-    opacity: 0.9;
+    font-size: 18px;
+    margin-bottom: 30px;
 }
 
+/* BUTTON */
 .btn-primary {
-    display: inline-block;
-    margin-top: 30px;
-    padding: 12px 30px;
-    border: 1px solid white;
+    background: white;
+    color: black;
+    padding: 12px 28px;
     text-decoration: none;
-    color: white;
+    font-size: 14px;
+    letter-spacing: 1px;
     transition: 0.3s;
 }
 
 .btn-primary:hover {
-    background: white;
-    color: black;
+    background: black;
+    color: white;
 }
