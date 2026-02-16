@@ -5,9 +5,10 @@
     box-sizing: border-box;
 }
 
-/* BODY */
 body {
     font-family: 'Poppins', sans-serif;
+    background: white;
+    color: #222;
 }
 
 /* NAVBAR */
@@ -21,10 +22,19 @@ body {
     z-index: 10;
 }
 
+.navbar-dark {
+    position: relative;
+    background: white;
+}
+
 .logo {
-    color: white;
     font-size: 22px;
     letter-spacing: 3px;
+    color: white;
+}
+
+.navbar-dark .logo {
+    color: black;
 }
 
 .nav-links {
@@ -40,7 +50,11 @@ body {
     letter-spacing: 1px;
 }
 
-/* HERO IMAGE SECTION */
+.dark-links a {
+    color: black;
+}
+
+/* HERO */
 .hero {
     height: 100vh;
     background: url("hero.png") center/cover no-repeat;
@@ -50,7 +64,6 @@ body {
     position: relative;
 }
 
-/* Dark overlay */
 .hero::before {
     content: "";
     position: absolute;
@@ -75,7 +88,6 @@ body {
     margin-bottom: 30px;
 }
 
-/* BUTTON */
 .btn-primary {
     background: white;
     color: black;
@@ -89,4 +101,36 @@ body {
 .btn-primary:hover {
     background: black;
     color: white;
+}
+
+/* ABOUT PAGE */
+.about-page {
+    padding: 100px 80px;
+}
+
+.container {
+    max-width: 900px;
+    margin: auto;
+}
+
+.about-page h1 {
+    font-family: 'Playfair Display', serif;
+    font-size: 42px;
+    margin-bottom: 30px;
+}
+
+.about-page h2 {
+    margin-top: 40px;
+    margin-bottom: 15px;
+    font-size: 24px;
+}
+
+.about-page p {
+    margin-bottom: 20px;
+    line-height: 1.6;
+}
+
+.values {
+    margin-left: 20px;
+    line-height: 1.8;
 }
